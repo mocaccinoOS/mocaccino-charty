@@ -1,0 +1,23 @@
+
+luet_version: "0.8.6"
+
+packages:
+  - "repository/luet"
+#  - "system/luet"
+
+rootfs_dir: "rootfs"
+
+debug: false
+
+features:
+  luet_box: false
+
+repositories: |
+  - name: "mocaccino-repository-index"
+    description: "MocaccinoOS Repository index"
+    type: "http"
+    enable: true
+    cached: true
+    priority: 1
+    urls:
+    - "https://get.mocaccino.org/mocaccino-repository-index"
