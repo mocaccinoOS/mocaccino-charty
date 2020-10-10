@@ -5,6 +5,10 @@ mkdir tmp
 wget "https://github.com/mudler/luet/releases/download/{{.Values.luet_version}}/luet-{{.Values.luet_version}}-linux-amd64" -O bin/luet --quiet
 chmod +x bin/luet
 
+if [ -e "bin/luet" ]; then
+  echo "Luet {{.Values.luet_version}} downloaded correctly"
+fi
+
 cat > config.yaml <<EOF
 general:
   debug: {{.Values.debug}}
@@ -31,6 +35,6 @@ mkdir -p {{.Values.rootfs_dir }}/var/cache/luet
 
 cp -rfv config_root.yaml {{.Values.rootfs_dir }}/etc/luet/luet.yaml
 cp -rfv bin/luet {{.Values.rootfs_dir }}/usr/bin/luet
-cp -rfv /etc/resolv.conf {{.Values.rootfs_dir }}/etc/resolv.conf
+echo "nameserver {{.Values.box_dns}}" > {{.Values.rootfs_dir }}/etc/resolv.conf
 cp -rfv /etc/ssl/certs {{.Values.rootfs_dir }}/etc/ssl
 {{- end }}
