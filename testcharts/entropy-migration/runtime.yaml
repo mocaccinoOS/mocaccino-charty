@@ -1,0 +1,5 @@
+commands:
+- run: "bash prepare_target.sh"
+- run: "bash test.sh"
+  name: "Run tests"
+  
