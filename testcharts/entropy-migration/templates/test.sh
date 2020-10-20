@@ -12,6 +12,8 @@ echo "#!/bin/bash" > wrapper
 echo "luet --config config.yaml \"\$@\"" >> wrapper
 chmod +x wrapper 
 
+./bin/luet install --config config.yaml system/luet-extensions
+
 LUET=$PWD/wrapper {{.Values.rootfs_dir }}/usr/bin/luet-migrate-entropy
 
 {{range $i, $e := .Values.packages }}
