@@ -1,4 +1,4 @@
-CHARTY_VERSION?=0.1
+CHARTY_VERSION?=0.2.0
 
 all: deps build
 
@@ -17,3 +17,4 @@ clean:
 build:
 	mkdir release
 	.bin/charty package testcharts/package-smoke release/
+	.bin/charty package testcharts/entropy-migration release/
