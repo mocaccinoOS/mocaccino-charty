@@ -26,6 +26,23 @@ else
     exit 1
 fi
 
+
+{{end}}
+
+{{ if .Values.upgrade }}
 time ./bin/luet --config config.yaml upgrade
+{{ end }}
+
+{{range $i, $e := .Values.install.packages }}
+
+./bin/luet install --config config.yaml {{$e}}
+
+if ./bin/luet --config config.yaml search --installed {{$e}} | grep -q {{$e}}; then
+    echo "{{$e}} OK. "
+else
+    echo "{{$e}} Not OK. Installed packages: "
+    ./bin/luet --config config.yaml search --installed {{$e}} -o json 
+    exit 1
+fi
 
 {{end}}

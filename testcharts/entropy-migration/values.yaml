@@ -5,9 +5,13 @@ packages:
   - "repository/luet"
   - "system/luet"
 
+install:
+    packages:
+      - "utils/charty"
 rootfs_dir: "rootfs"
 
 debug: false
+upgrade: true
 
 features:
   luet_box: false
