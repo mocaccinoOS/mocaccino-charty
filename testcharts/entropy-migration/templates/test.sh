@@ -26,4 +26,6 @@ else
     exit 1
 fi
 
+time ./bin/luet --config config.yaml upgrade
+
 {{end}}
