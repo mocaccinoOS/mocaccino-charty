@@ -18,3 +18,4 @@ build:
 	mkdir release
 	.bin/charty package testcharts/package-smoke release/
 	.bin/charty package testcharts/entropy-migration release/
+	.bin/charty package testcharts/artifact-qa release/
