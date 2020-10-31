@@ -12,3 +12,4 @@ export LUET_NOLOCK=true
 
 export ROOT_DIR={{$packagesdir}}
 {{$rootfs}}/usr/bin/luet-qa-artefacts
+{{$rootfs}}/usr/bin/luet-qa-repo-fileconflicts $ROOT_DIR

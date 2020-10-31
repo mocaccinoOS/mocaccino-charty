@@ -17,3 +17,5 @@ system:
   database_path: "/"
 repositories: {{ nindent 1 .Values.repositories }}
 EOF
+
+mkdir -p $PWD/{{.Values.rootfs_dir}}
