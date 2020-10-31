@@ -11,5 +11,9 @@ export LUET_NOLOCK=true
 ./bin/luet install --config config.yaml system/luet-extensions {{- if not $debug }}>/dev/null 2>&1 {{- end }}
 
 export ROOT_DIR={{$packagesdir}}
+{{- if .Values.features.verify_checksum }}
 {{$rootfs}}/usr/bin/luet-qa-artefacts
+{{- end }}
+{{- if .Values.features.verify_fileconflicts }}
 {{$rootfs}}/usr/bin/luet-qa-repo-fileconflicts $ROOT_DIR
+{{- end }}

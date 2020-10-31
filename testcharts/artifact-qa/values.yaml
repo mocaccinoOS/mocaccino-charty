@@ -6,6 +6,10 @@ rootfs_dir: "rootfs"
 
 debug: false
 
+features:
+  verify_checksum: false
+  verify_fileconflicts: false
+
 repositories: |
   - name: "mocaccino-repository-index"
     description: "MocaccinoOS Repository index"
