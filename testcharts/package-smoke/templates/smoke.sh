@@ -24,4 +24,14 @@ else
     exit 1
 fi
 
+{{ if .Values.features.uninstall }}
+set -e
+{{- if $luet_box }}
+./bin/luet box exec --rootfs $PWD/{{$rootfs}} \
+--stdin --stdout --env USER=root --env LUET_NOLOCK=true --stderr --entrypoint /usr/bin/luet uninstall {{$e}} {{- if not $debug }}>/dev/null 2>&1 {{- end }}
+{{- else }}
+./bin/luet uninstall --config config.yaml {{$e}} {{- if not $debug }}>/dev/null 2>&1 {{- end }}
+{{- end }}
+{{- end }}
+
 {{end}}

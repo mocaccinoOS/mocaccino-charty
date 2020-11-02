@@ -10,6 +10,7 @@ rootfs_dir: "rootfs"
 debug: false
 
 features:
+  uninstall: false
   luet_box: false
 box_dns: 8.8.8.8
 repositories: |
