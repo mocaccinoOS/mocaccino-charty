@@ -52,4 +52,11 @@ repositories: |
     priority: 2
     urls:
         - "https://get.mocaccino.org/mocaccino-portage-tree"
-
+  - name: "mocaccino-musl-universe"
+    description: "MocaccinoOS Musl Universe"
+    type: "http"
+    enable: true
+    cached: true
+    priority: 2
+    urls:
+        - "https://get.mocaccino.org/mocaccino-musl-universe"
