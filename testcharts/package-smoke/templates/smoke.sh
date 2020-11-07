@@ -6,6 +6,7 @@ export LUET_NOLOCK=true
 {{$debug:=.Values.debug}}
 {{$rootfs:=.Values.rootfs_dir}}
 {{$luet_box:=.Values.features.luet_box}}
+{{$uninstall:=.Values.features.uninstall}}
 
 {{range $i, $e := .Values.packages }}
 
@@ -24,7 +25,7 @@ else
     exit 1
 fi
 
-{{ if .Values.features.uninstall }}
+{{ if $uninstall }}
 set -e
 {{- if $luet_box }}
 ./bin/luet box exec --rootfs $PWD/{{$rootfs}} \
