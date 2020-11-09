@@ -17,11 +17,11 @@ export LUET_NOLOCK=true
 ./bin/luet install --config config.yaml {{$e}} {{- if not $debug }}>/dev/null 2>&1 {{- end }}
 {{- end }}
 
-if ./bin/luet --config config.yaml search --installed {{$e}} | grep -q {{$e}}; then
+if ./bin/luet --config config.yaml search --hidden --installed {{$e}} | grep -q {{$e}}; then
     echo "{{$e}} OK. "
 else
     echo "{{$e}} Not OK. Installed packages: "
-    ./bin/luet --config config.yaml search --installed {{$e}} -o json 
+    ./bin/luet --config config.yaml search --hidden --installed {{$e}} -o json
     exit 1
 fi
 
