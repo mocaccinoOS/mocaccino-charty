@@ -51,7 +51,7 @@ repositories: |
     cached: true
     priority: 2
     urls:
-        - "https://get.mocaccino.org/mocaccino-portage-tree"
+    - "https://get.mocaccino.org/mocaccino-portage-tree"
   - name: "mocaccino-musl-universe"
     description: "MocaccinoOS Musl Universe"
     type: "http"
@@ -59,7 +59,7 @@ repositories: |
     cached: true
     priority: 2
     urls:
-        - "https://get.mocaccino.org/mocaccino-musl-universe"
+    - "https://get.mocaccino.org/mocaccino-musl-universe"
   - name: "mocaccino-kernel-repo"
     description: "MocaccinoOS Kernel Repository"
     type: "http"
@@ -67,4 +67,4 @@ repositories: |
     cached: true
     priority: 2
     urls:
-        - "https://get.mocaccino.org/mocaccino-kernel"
+    - "https://get.mocaccino.org/mocaccino-kernel"
