@@ -2,6 +2,7 @@
 
 export TMPDIR=$PWD/tmp
 export LUET_NOLOCK=true
+export LUET_YES=true
 
 {{$debug:=.Values.debug}}
 {{$rootfs:=.Values.rootfs_dir}}
