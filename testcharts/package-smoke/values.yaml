@@ -14,6 +14,14 @@ features:
   luet_box: false
 box_dns: 8.8.8.8
 repositories: |
+  - name: "mocaccino-os-commons"
+    description: "MocaccinoOS os-commons"
+    type: "http"
+    enable: true
+    cached: true
+    priority: 1
+    urls:
+    - "https://get.mocaccino.org/mocaccino-os-commons"
   - name: "mocaccino-repository-index"
     description: "MocaccinoOS Repository index"
     type: "http"
