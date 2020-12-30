@@ -76,3 +76,11 @@ repositories: |
     priority: 2
     urls:
     - "https://get.mocaccino.org/mocaccino-kernel"
+  - name: "mocaccino-funtoo"
+    description: "MocaccinoOS Portage/Funtoo Repository"
+    type: "http"
+    enable: true
+    cached: true
+    priority: 2
+    urls:
+    - "https://get.mocaccino.org/mocaccino-funtoo-tree"
