@@ -52,6 +52,14 @@ repositories: |
     priority: 1
     urls:
     - "https://raw.githubusercontent.com/Luet-lab/luet-repo/gh-pages"
+  - name: "mocaccino-desktop"
+    description: "MocaccinoOS Desktop Repository"
+    type: "http"
+    enable: true
+    cached: true
+    priority: 1
+    urls:
+    - "https://get.mocaccino.org/mocaccino-desktop"
   - name: "mocaccino-portage"
     description: "MocaccinoOS Portage/Gentoo Repository"
     type: "http"
