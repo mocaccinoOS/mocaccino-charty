@@ -1,5 +1,5 @@
 
-luet_version: "0.9.3"
+luet_version: "0.10.2"
 
 packages:
   - "repository/luet"
