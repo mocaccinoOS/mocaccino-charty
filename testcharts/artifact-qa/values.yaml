@@ -1,5 +1,5 @@
 
-luet_version: "0.8.11"
+luet_version: "0.10.2"
 
 packages_dir: "/somewhere/in/your/system"
 rootfs_dir: "rootfs"
